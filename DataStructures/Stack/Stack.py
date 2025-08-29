@@ -15,3 +15,8 @@ def push(pila, elemento):
 def is_empty(pila):
     x = sl.is_empty(pila)
     return x
+def top(pila):
+    if not sl.is_empty(pila):
+        return sl.last_element(pila)
+    else:
+        raise Exception("EmptyStructureError: queue is empty" )
