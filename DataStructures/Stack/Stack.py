@@ -12,3 +12,6 @@ def pop(stack):
 def push(pila, elemento):
     sl.add_last(pila, elemento)
     return pila
+def is_empty(pila):
+    x = sl.is_empty(pila)
+    return x
