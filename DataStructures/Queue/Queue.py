@@ -7,6 +7,10 @@ def enqueue(cola, elemento):
     lt.add_last(cola, elemento)
     return cola
 
+def dequeue(cola):
+    cola=lt.remove_first(cola)
+    return cola
+
 def is_empty(cola):
     x = lt.is_empty(cola)
     return x
