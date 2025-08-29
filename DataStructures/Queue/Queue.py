@@ -14,6 +14,11 @@ def dequeue(cola):
 def is_empty(cola):
     x = lt.is_empty(cola)
     return x
+def peek(cola):
+    if not is_empty(cola):
+        return lt.get_element(cola, 1)
+    else:
+        raise Exception("EmptyStructureError: queue is empty")
 
 def size(cola):
     return lt.size(cola)
