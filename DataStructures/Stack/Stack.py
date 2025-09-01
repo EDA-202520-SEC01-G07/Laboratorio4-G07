@@ -19,4 +19,6 @@ def top(pila):
     if not sl.is_empty(pila):
         return sl.last_element(pila)
     else:
-        raise Exception("EmptyStructureError: queue is empty" )
+        raise Exception("EmptyStructureError: queue is empty") 
+def size(pila):
+    return sl.size(pila)
