@@ -58,8 +58,8 @@ def new_logic():
     catalog['tags'] = lt.new_list()
     catalog['book_tags'] = lt.new_list()
     # TODO Implementar la inicialización de la lista de asociación de libros y tags
-    catalog['books_to_read'] = None
-    catalog["book_sublist"] = None
+    catalog['books_to_read'] = lt.new_list
+    catalog["book_sublist"] = lt.new_list
     return catalog
 
 
@@ -74,6 +74,7 @@ def load_data(catalog):
     books, authors = load_books(catalog)
     tag_size = load_tags(catalog)
     book_tag_size = load_books_tags(catalog)
+    books_to_read = load_books_to_read(catalog)
     # TODO Cargar los datos de libros para leer
     return books, authors, tag_size, book_tag_size, books_to_read
 
@@ -118,6 +119,10 @@ def load_books_to_read(catalog):
     Carga la información del archivo to_read y los agrega a la lista de libros por leer
     """
     # TODO Implementar la carga de los libros por leer del archivo to_read
+    bookstoreadfile= data_dir + '/to_read.csv'
+    input_file = csv.DictReader(open(bookstoreadfile, enconding='utf-8'))
+    for booktoread in input_file:
+        add_book_tag(catalog, booktoread)
     return books_to_read_size(catalog)
 
 # Funciones de consulta sobre el catálogo
