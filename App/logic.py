@@ -133,7 +133,7 @@ def get_books_stack_by_user(catalog, user_id):
     Retorna una pila con los libros que un usuario tiene por leer.
     """
     books_stack = st.new_stack()
-
+    
     # TODO Completar la función que retorna los libros por leer de un usuario. Se debe usar el TAD Pila para resolver el requerimiento
 
     return books_stack
@@ -268,7 +268,7 @@ def book_tag_size(catalog):
 
 def books_to_read_size(catalog):
     # TODO Implementar la función que retorna el tamaño de la lista de libros por leer
-    pass
+    return lt.size(catalog["books_to_read"])
 
 # Funciones utilizadas para comparar elementos dentro de una lista
 
@@ -358,7 +358,8 @@ def measure_stack_performance(catalog):
     # Medir push
     start_time = get_time()
     # TODO Implementar la medición de tiempo para la operación push
-
+    st.push()
+    
     # Medir top
     start_time = get_time()
     # TODO Implementar la medición de tiempo para la operación top
