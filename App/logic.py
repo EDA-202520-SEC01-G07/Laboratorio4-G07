@@ -394,7 +394,7 @@ def measure_stack_performance(catalog):
     # Medir dequeue
     # TODO Implementar la medición de tiempo para la operación pop
     start_time = get_time()
-    while not st.is_empty(stack)
+    while not st.is_empty(stack):
         st.pop(stack)
     end_time = get_time()
     pop_time = delta_time(start_time, end_time)
