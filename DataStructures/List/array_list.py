@@ -85,7 +85,7 @@ def exchange(array_list,index1,index2):
     return False
 
 def sub_list(array_list, start_index, end_index):
-    if array_list["size"]>0 and start_index<array_list["size"] and end_index<array_list["size"] and start_index<=end_index:
+    if array_list["size"]>= 0 and start_index < array_list["size"] and end_index < array_list["size"] and start_index <= end_index:
         newlist=new_list()
         for i in range(start_index,end_index+1):
             add_last(newlist,array_list["elements"][i])
