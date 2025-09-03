@@ -13,7 +13,7 @@ def dequeue(my_queue):
         raise Exception("EmptyStructureError: queue is empty")
     else:
         element = lt.remove_first(my_queue)
-        return element
+    return element
 def is_empty(my_queue):
     x = lt.is_empty(my_queue)
     return x
