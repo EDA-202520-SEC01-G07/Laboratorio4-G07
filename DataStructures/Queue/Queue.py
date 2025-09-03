@@ -5,14 +5,14 @@ def new_queue():
     return my_queue
 def enqueue(my_queue, element):
     lt.add_last(my_queue, element)
-    
+    return my_queue
 
 def dequeue(my_queue):
     if is_empty(my_queue):
         raise Exception("EmptyStructureError: queue is empty")
     else:
         element = lt.remove_first(my_queue)
-    
+    return element
 def is_empty(my_queue):
     x = lt.is_empty(my_queue)
     return x
