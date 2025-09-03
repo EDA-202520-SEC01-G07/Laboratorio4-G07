@@ -3,6 +3,7 @@ from DataStructures.List import array_list as lt
 def new_queue():
     my_queue = lt.new_list()
     return my_queue
+
 def enqueue(my_queue, element):
     lt.add_last(my_queue, element)
     return my_queue
@@ -18,7 +19,7 @@ def is_empty(my_queue):
     return x
 def peek(my_queue):
     if not is_empty(my_queue):
-        return lt.get_element(my_queue, 1)
+        return lt.get_element(my_queue, 0)
     else:
         raise Exception("EmptyStructureError: queue is empty")
 def size(my_queue):
