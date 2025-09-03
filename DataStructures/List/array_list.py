@@ -84,11 +84,15 @@ def exchange(array_list,index1,index2):
         return True
     return False
 
-def sub_list(array_list, start_index, end_index):
-    if array_list["size"]>= 0 and start_index < array_list["size"] and end_index < array_list["size"] and start_index <= end_index:
+def sub_list(array_list, start_index, num_elements):
+    if start_index >= array_list["size"]:
+        raise Exception('IndexError: list index out of range')
+    else:
         newlist=new_list()
-        for i in range(start_index,end_index+1):
+        end_index = start_index+num_elements
+        if end_index > array_list["size"]:
+            end_index = array_list["size"]
+        
+        for i in range(start_index,end_index):
             add_last(newlist,array_list["elements"][i])
         return newlist
-    return None
-
