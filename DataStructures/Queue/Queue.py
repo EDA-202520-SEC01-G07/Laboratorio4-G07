@@ -1,24 +1,25 @@
 from DataStructures.List import array_list as lt
 
 def new_queue():
-    cola = lt.new_list()
-    return cola
-def enqueue(cola, elemento):
-    lt.add_last(cola, elemento)
-    return cola
+    my_queue = lt.new_list()
+    return my_queue
+def enqueue(my_queue, element):
+    lt.add_last(my_queue, element)
+    return my_queue
 
-def dequeue(cola):
-    lt.remove_first(cola)
-    return cola
-
-def is_empty(cola):
-    x = lt.is_empty(cola)
+def dequeue(my_queue):
+    if is_empty(my_queue):
+        raise Exception("EmptyStructureError: queue is empty")
+    else:
+        element = lt.remove_first(my_queue)
+        return element
+def is_empty(my_queue):
+    x = lt.is_empty(my_queue)
     return x
-def peek(cola):
-    if not lt.is_empty(cola):
-        return lt.get_element(cola, 1)
+def peek(my_queue):
+    if not is_empty(my_queue):
+        return lt.get_element(my_queue, 1)
     else:
         raise Exception("EmptyStructureError: queue is empty")
-
-def size(cola):
-    return lt.size(cola)
+def size(my_queue):
+    return lt.size(my_queue)
