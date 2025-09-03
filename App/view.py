@@ -26,6 +26,10 @@
 
 import sys
 import App.logic as logic
+from DataStructures.List import array_list as lt
+from DataStructures.Queue import queue as q
+from DataStructures.Stack import stack as st
+import App.logic as logic
 
 """
 La vista se encarga de la interacción con el usuario
@@ -65,7 +69,13 @@ def load_data(control):
 
 def print_books_to_read(results):
     # TODO Imprimir los libros por leer
-    pass
+    size=logic.books_to_read_size
+    if size==0:
+        print("El usuario no tiene libros por leer")
+    else:
+        for i in range(1, size+1):
+            print(lt.get_element(results, i))
+    
 
 
 def print_tests_results(queue_results, stack_results):
