@@ -69,13 +69,11 @@ def load_data(control):
 
 def print_books_to_read(results):
     # TODO Imprimir los libros por leer
-    size=logic.books_to_read_size
-    if size==0:
-        print("El usuario no tiene libros por leer")
+    size = lt.size(results)
+    if size == 0:
+        print("El usuario no tiene libros por leer")    
     else:
-        for i in range(1, size+1):
-            print(lt.get_element(results, i))
-    
+        print("Libros por leer: " + str(size))
 
 
 def print_tests_results(queue_results, stack_results):
