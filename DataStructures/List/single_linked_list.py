@@ -7,26 +7,26 @@ def new_list():
     
     return newlist
 def get_element(my_list, pos):
-    searchpos = 0
+    posicion = 0
     node = my_list["first"]
-    while searchpos < pos:
+    while posicion < pos:
         node = node["next"]
-        searchpos += 1
+        posicion += 1
     return node["info"]
 
 
 def is_present(my_list, element, cmp_function):
-    is_in_array = False
+    existe = False
     temp = my_list["first"]
     count = 0
-    while not is_in_array and temp is not None:
+    while not existe and temp != None:
         if cmp_function(element, temp["info"]) == 0:
-            is_in_array = True
+            existe = True
         else:
             temp = temp["next"]
             count += 1
 
-    if not is_in_array:
+    if not existe:
         count = -1
     return count
 
