@@ -158,16 +158,15 @@ def get_user_position_on_queue(catalog, user_id, book_id):
         i += 1
     
     if q.is_empty(queue) != True:
-        copia = queue
         position = 0
-        primero = q.dequeue(copia)
-        while user_id != primero:
+        primero = q.dequeue(queue)
+        while user_id != int(primero):
             position +=1
-            primero = q.dequeue(copia)
+            primero = q.dequeue(queue)
+        return position
     else:
         return None
     # TODO Completar la función que retorna la posición de un usuario en la cola para leer un libro. Se debe usar el TAD Cola para resolver el requerimiento.
-    return position
 
 # Funciones para agregar informacion al catalogo
 
