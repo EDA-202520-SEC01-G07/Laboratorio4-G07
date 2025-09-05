@@ -28,8 +28,8 @@ import csv
 import os
 import time
 from DataStructures.List import single_linked_list as lt
-from DataStructures.Queue import queue as q
-from DataStructures.Stack import stack as st
+from DataStructures.queue import queue as q
+from DataStructures.stack import stack as st
 
 
 data_dir = os.path.dirname(os.path.realpath('__file__')) + '/Data/'
